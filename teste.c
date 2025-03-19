@@ -2,22 +2,22 @@
 
 int main()
 {
-
-    //variaveis definidas em int, float, char e char[]
+    //variáveis separadas para cada atributo da cidade.
     int pontosTuris1, pontosTuris2, populacao1, populacao2;
     float area1, area2, pib1, pib2;
     char estado1, estado2;
-    char cidade1[50], cidade2[50], codCarta1[50], codCarta2[50];
+    char cidade1[20], cidade2[20], codCarta1[50], codCarta2[50];
 
-    printf("Estado: "); //printf (o que será mostrado para o usuário)
-    scanf(" %c", &estado1); //scanf para leitura de variaveis
+    // Cadastro da Carta 1:
+    printf("Estado: ");
+    scanf(" %c", &estado1);
 
     printf("Código da carta 1: ");
-    scanf("%s", codCarta1); //"%" de acordo com cada tipo de váriavel 
+    scanf(" %s", codCarta1);
 
     printf("Nome da Cidade: ");
-    scanf("%s", cidade1);
-
+    scanf(" %s", cidade1);
+   
     printf("População: ");
     scanf("%d", &populacao1);
 
@@ -30,16 +30,17 @@ int main()
     printf("Número de Pontos Turísticos: ");
     scanf("%d", &pontosTuris1);
 
-    printf("\n");//printf vazio para dar um espaço entre os dados de uma carta para outra (que o usuário digitará)
+    // Cadastro da Carta 2:
+    printf("\n");
 
     printf("Estado: ");
-    scanf(" %c", &estado2);
+    scanf(" %c", &estado2); 
 
     printf("Código da carta 2: ");
-    scanf("%s", codCarta2);
+    scanf(" %s", codCarta2);
 
     printf("Nome da Cidade: ");
-    scanf("%s", cidade2);
+    scanf(" %s", cidade1);
 
     printf("População: ");
     scanf("%d", &populacao2);
@@ -53,7 +54,8 @@ int main()
     printf("Número de Pontos Turísticos: ");
     scanf("%d", &pontosTuris2);
 
-    printf("\nCarta 1:\n");//"\n" para separar carta 1 da carta 2
+    // Exibindo os dados cadastrados:
+    printf("\nCarta 1:\n");
     printf("Estado: %c\n", estado1);
     printf("Código: %s\n", codCarta1);
     printf("Nome da Cidade: %s\n", cidade1);
