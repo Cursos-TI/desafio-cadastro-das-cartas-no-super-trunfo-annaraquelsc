@@ -5,7 +5,7 @@ int main()
 
     //variaveis definidas em int, float, char e char[]
     int pontosTuris1, pontosTuris2, populacao1, populacao2;
-    float area1, area2, pib1, pib2;
+    float area1, area2, pib1, pib2, densidade1, densidade2, pibperc1, pibperc2;
     char estado1, estado2;
     char cidade1[50], cidade2[50], codCarta1[50], codCarta2[50];
 
@@ -58,9 +58,13 @@ int main()
     printf("Código: %s\n", codCarta1);
     printf("Nome da Cidade: %s\n", cidade1);
     printf("População: %d\n", populacao1);
-    printf("Área: %.2f\n", area1);
-    printf("PIB: %.2f\n", pib1);
+    printf("Área: %.2f km²\n", area1);
+    printf("PIB: %.2f bilhões de reais\n", pib1);
     printf("Número de Pontos Turísticos: %d\n", pontosTuris1);
+    densidade1 = (float) populacao1 / area1;
+    printf("Densidade Populacional: %.2f hab/km²\n", densidade1);
+    pibperc1 = (pib1 * 1000000000.0) / (float)populacao1;
+    printf("PIB per Capita: %.2f reais", pibperc1);
 
     printf("\n");
 
@@ -69,9 +73,13 @@ int main()
     printf("Código: %s\n", codCarta2);
     printf("Nome da Cidade: %s\n", cidade2);
     printf("População: %d\n", populacao2);
-    printf("Área: %.2f\n", area2);
-    printf("PIB: %.2f\n", pib2);
+    printf("Área: %.2f km²\n", area2);
+    printf("PIB: %.2f bilhões de reais\n", pib2);
     printf("Número de Pontos Turísticos: %d\n", pontosTuris2);
+    densidade2 = (float)populacao2 / area2;
+    printf("Densidade Populacional: %.2f hab/km²\n", densidade2);
+    pibperc2 = (pib2 * 1000000000.0) / (float)populacao2;
+    printf("PIB per Capita: %.2f reais", pibperc2);
 
     return 0;
 }
